@@ -5,20 +5,15 @@ dist: xenial
 
 language: python
 
-matrix:
-  include:
-    - arch: amd64
-      python: 3.6
-    - arch: amd64
-      python: 3.7
-    - arch: amd64
-      python: 3.8
-    - arch: arm64
-      python: 3.8
-
 install:
   - pip3 install pytest
   - pip3 install .
+  
+python:
+  - 3.5
+  - 3.6
+  - 3.7
+  - 3.8-dev
 
 script:
   - pytest
