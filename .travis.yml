@@ -52,7 +52,6 @@ jobs:
       services:
         - docker
       env: DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64
-           PRE_CMD=linux32
            DEPLOY=1
       install:
         - docker pull $DOCKER_IMAGE
