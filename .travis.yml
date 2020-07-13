@@ -25,7 +25,6 @@ script:
 jobs:
   include:
     - name: "manylinux x86-64"
-      arch: amd64
       services:
         - docker
       env: DOCKER_IMAGE=quay.io/pypa/manylinux1_x86_64
@@ -36,7 +35,6 @@ jobs:
         - docker run --rm -v `pwd`:/io $DOCKER_IMAGE $PRE_CMD /io/.travis/build-linux-wheels.sh
         - ls wheelhouse/
     - name: "manylinux i686"
-      arch: i686
       services:
         - docker
       env: DOCKER_IMAGE=quay.io/pypa/manylinux1_i686
